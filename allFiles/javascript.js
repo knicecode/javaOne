@@ -1,4 +1,11 @@
 const choices = ["ROCK", "PAPER", "SCISSORS"];
+const playerSelection = getPlayerChoice()
+const computerSelection = getRandomChoice()
+let win = "You win!"
+let lose = "You lose!"
+let tie = "It's a tie!"
+let playerScore = 0
+let computerScore = 0
 
 function getRandomNum(limit) {
   return Math.floor(Math.random() * limit);
@@ -9,26 +16,15 @@ function getRandomChoice() {
   return choices[randomNum];
 }
 
-
-
-
-const playerSelection = getPlayerChoice()
-const computerSelection = getRandomChoice()
-let win = "You win!"
-let lose = "You lose!"
-let tie = "It's a tie!"
-let playerScore = 0
-let computerScore = 0
-
 function getPlayerChoice() {
-  let playerInput = prompt("Rock, paper, or scissors?")
+  var playerInput = prompt("Rock, paper, or scissors?")
   let response = ""
   
-  if (playerInput = "Rock") {
+  if (playerInput == "Rock") {
     response = choices[0]
-  } else if (playerInput = "Paper") {
+  } else if (playerInput == "Paper") {
     response = choices[1]
-  } else if (playerInput = "Scissors") {
+  } else if (playerInput == "Scissors") {
     response = choices[2]
   }
 
@@ -67,8 +63,6 @@ function playRound(playerSelection, computerSelection) {
       roundResult = tie
     }
   } 
-  
-
   
   return roundResult
 }
