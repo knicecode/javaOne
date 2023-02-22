@@ -17,14 +17,14 @@ function getRandomChoice() {
 }
 
 function getPlayerChoice() {
-  var playerInput = prompt("Rock, paper, or scissors?")
+  var playerInput = prompt("Rock, paper, or scissors?").toLowerCase()
   let response = ""
   
-  if (playerInput == "Rock") {
+  if (playerInput == "rock") {
     response = choices[0]
-  } else if (playerInput == "Paper") {
+  } else if (playerInput == "paper") {
     response = choices[1]
-  } else if (playerInput == "Scissors") {
+  } else if (playerInput == "scissors") {
     response = choices[2]
   }
 
