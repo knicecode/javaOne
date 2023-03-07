@@ -1,11 +1,30 @@
 const choices = ["ROCK", "PAPER", "SCISSORS"];
-const playerSelection = getPlayerChoice()
-const computerSelection = getRandomChoice()
-let win = "You win!"
-let lose = "You lose!"
-let tie = "It's a tie!"
-let playerScore = 0
-let computerScore = 0
+const computerSelection = getRandomChoice();
+let win = "You win!";
+let lose = "You lose!";
+let tie = "It's a tie!";
+let playerScore = 0;
+let computerScore = 0;
+let roundResult = "";
+const playerRock = document.querySelector('#btnone');
+const playerPaper = document.querySelector('#btntwo');
+const playerScissors = document.querySelector('#btnthree');
+
+/**Getting user input from buttons*/
+
+playerRock.addEventListener('click', () => {
+  playRound(choices[0], computerSelection);
+})
+
+playerPaper.addEventListener('click', () => {
+  playRound(choices[1], computerSelection);
+})
+
+playerScissors.addEventListener('click', () => {
+  playRound(choices[2], computerSelection);
+})
+
+
 
 function getRandomNum(limit) {
   return Math.floor(Math.random() * limit);
@@ -16,25 +35,9 @@ function getRandomChoice() {
   return choices[randomNum];
 }
 
-function getPlayerChoice() {
-  var playerInput = prompt("Rock, paper, or scissors?").toLowerCase()
-  let response = ""
-  
-  if (playerInput == "rock") {
-    response = choices[0]
-  } else if (playerInput == "paper") {
-    response = choices[1]
-  } else if (playerInput == "scissors") {
-    response = choices[2]
-  }
-
-  return response
-}
-
-
 function playRound(playerSelection, computerSelection) {
   
-  let roundResult = ""
+  computerSelection = getRandomChoice()
 
   if (playerSelection == choices[0]) {
     if (computerSelection == choices[0]) {
@@ -64,25 +67,17 @@ function playRound(playerSelection, computerSelection) {
     }
   } 
   
-  return roundResult
-}
-
-function game() {
-  for (i = 0; i < 5; i++) {
-    if (roundResult = win) {
-      playerScore++
-    
-    } else if (roundResult = lose) {
-      computerScore++
-    
-    } else if (roundResult = tie) {
-      i--
-    }
-  }
+  console.log(roundResult)
 }
 
 
-console.log(playRound(playerSelection, computerSelection))
 
-console.log("Computer choice:", computerSelection)
-console.log("My choice:", playerSelection)
+
+
+
+
+
+
+
+
+
