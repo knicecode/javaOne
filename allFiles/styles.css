@@ -26,3 +26,10 @@ button {
     gap: 50px;
     margin-top: 60px;
 }
+
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}

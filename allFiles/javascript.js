@@ -10,19 +10,6 @@ const playerRock = document.querySelector('#btnone');
 const playerPaper = document.querySelector('#btntwo');
 const playerScissors = document.querySelector('#btnthree');
 
-/**Getting user input from buttons*/
-
-playerRock.addEventListener('click', () => {
-  playRound(choices[0], computerSelection);
-})
-
-playerPaper.addEventListener('click', () => {
-  playRound(choices[1], computerSelection);
-})
-
-playerScissors.addEventListener('click', () => {
-  playRound(choices[2], computerSelection);
-})
 
 
 
@@ -66,18 +53,26 @@ function playRound(playerSelection, computerSelection) {
       roundResult = tie
     }
   } 
+
+  alert(roundResult)
   
-  console.log(roundResult)
 }
 
 
 
+playerRock.addEventListener('click', () => {
+  playRound(choices[0], computerSelection)
+})
 
 
+playerPaper.addEventListener('click', () => {
+  playRound(choices[1], computerSelection)
+})
 
 
+playerScissors.addEventListener('click', () => {
+  playRound(choices[2], computerSelection)
+})
 
-
-
-
+/* create a function that plays five rounds, updates round number, updates score, stops game if user/comp gets 3
 
